@@ -5,7 +5,8 @@ export const newsFetch = async (parent, url) => {
 
     data.forEach(element => {
 
-        const { title, urlToImage, description, publishedAt, content, url } = element
+        const { title, urlToImage, description, publishedAt, url } = element
+
 
 
         const child = document.createElement('div')
@@ -13,7 +14,7 @@ export const newsFetch = async (parent, url) => {
         child.innerHTML = `
                 <div class="row g-0">
                     <div class="col-md-5">
-                        <img src='${urlToImage || 'https://thumbs.dreamstime.com/b/news-newspapers-folded-stacked-word-wooden-block-puzzle-dice-concept-newspaper-media-press-release-42301371.jpg'}' class="img-fluid rounded mt-3" alt="...">
+                        <img src="${urlToImage || '../resources/favicon.jpg'}" class="img-fluid rounded mt-3" alt="...">
                     </div>
                     <div class="col-md-7">
                         <div class="card-body">
@@ -22,8 +23,10 @@ export const newsFetch = async (parent, url) => {
                             <div class="d-flex justify-content-around align-items-center">
                                 <p class="card-text"><small class="text-muted"><i class="fas fa-clock"></i>
                                         ${publishedAt.slice(0, 10)}</small></p>
-                                <button type="button" class="btn btn-outline-success">Details</button>
-                            </div>
+                            <button type="button" onClick="detailsLoad('${url}','${urlToImage}')" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Details
+</button>
+                                </div>
                         </div>
                     </div>
                 </div>
@@ -34,8 +37,6 @@ export const newsFetch = async (parent, url) => {
     });
 
 }
-
-
 
 
 

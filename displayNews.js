@@ -25,3 +25,11 @@ const displayNews = (id, btn) => {
     btn.className = 'btn btn-light navBtn active'
     elements[id].style.display = 'block';
 }
+
+// modal upload news
+
+const detailsLoad = (url, img) => {
+    document.getElementById('modalImage').src = img
+    document.getElementById('Link').href = url
+
+}
