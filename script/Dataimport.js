@@ -33,9 +33,9 @@ export const newsFetch = async (parent, url) => {
 
     });
 
-
-
 }
+
+
 
 
 

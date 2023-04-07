@@ -39,19 +39,21 @@
                     <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                         <ul class="navbar-nav p-3 fw-bold ">
                             <li class="nav-item ms-1 mt-1 mt-md-0">
-                                <button class="btn btn-light" onclick="displayNews()">BBC news</button>
+                                <button class="btn btn-light navBtn" onclick="displayNews(0,this)">BBC
+                                    news</button>
                             </li>
                             <li class="nav-item ms-1 mt-1 mt-md-0">
-                                <button class="btn btn-light" onclick='displayNews()'>CNN news</button>
+                                <button class="btn btn-light navBtn" onclick='displayNews(1,this)'>CNN news</button>
                             </li>
                             <li class="nav-item ms-1 mt-1 mt-md-0">
-                                <button class="btn btn-light" onclick='displayNews()'>News India</button>
+                                <button class="btn btn-light navBtn" onclick='displayNews(2,this)'>News India</button>
                             </li>
                             <li class="nav-item ms-1 mt-1 mt-md-0">
-                                <button class="btn btn-light" onclick='displayNews()'>sports</button>
+                                <button class="btn btn-light navBtn" onclick='displayNews(3,this)'>sports</button>
                             </li>
                             <li class="nav-item ms-1 mt-1 mt-md-0">
-                                <button class="btn btn-light" onclick='displayNews()'>entertainment</button>
+                                <button class="btn btn-light navBtn"
+                                    onclick='displayNews(4,this)'>entertainment</button>
                             </li>
                         </ul>
                     </div>
@@ -61,33 +63,26 @@
 
     </header>
     <main class="container mt-5">
-        <section id="bbc" class="row justify-content-between align-items-center">
-            <div class="card p-3 mb-3 col-12 col-lg-6 ">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="./resources/favicon.jpg" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <div class="d-flex justify-content-around align-items-center">
-                                <p class="card-text"><small class="text-muted"><i class="fas fa-clock"></i>
-                                        time</small></p>
-                                <button type="button" class="btn btn-outline-success">Details</button>
-                            </div>
+        <div id="a">
+            <section id="bbc" class="row justify-content-between align-items-center"></section>
+        </div>
+        <div id="b">
+            <section id="cnn" class="row justify-content-between align-items-center"></section>
+        </div>
+        <div id="c">
+            <section id="india" class="row justify-content-between align-items-center"></section>
+        </div>
+        <div id="d">
+            <section id="science" class="row justify-content-between align-items-center"></section>
+        </div>
+        <div id="e">
+            <section id="entertainment" class="row justify-content-between align-items-center"></section>
+        </div>
 
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-        </section>
-        <section id="cnn" class="row justify-content-between align-items-center"></section>
-        <section id="india" class="row justify-content-between align-items-center">india</section>
-        <section id="science" class="row justify-content-between align-items-center">science</section>
-        <section id="entertainment" class="row justify-content-between align-items-center">entertainment</section>
+
+
+
 
     </main>
     <footer>
@@ -101,7 +96,8 @@
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
     <!-- main Script ----------------------------------------->
-    <script type="module" src="./script/Script.js"></script>
+    <script type="module" src="./Script/Script.js"></script>
+    <script src="./displayNews.js"></script>
 
 </body>
 
