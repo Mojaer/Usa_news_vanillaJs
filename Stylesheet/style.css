@@ -1,15 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:ital,wght@0,400;1,600&family=Roboto+Slab:wght@400;700&display=swap');
 
-/* * {
-    font-family: 'Playfair Display', serif;
-} */
 * {
     font-family: 'Poppins', sans-serif;
 }
 
 #world-icon {
-    font-size: 4rem;
+    font-size: 4.5rem;
     color: rgb(62, 62, 116);
+    cursor: pointer;
 
 }
 
@@ -17,4 +15,11 @@
 h3 {
     font-family: 'Roboto Slab', serif;
     font-weight: 700;
+    cursor: pointer;
+
+}
+
+.card {
+    border: none;
+    font-family: 'Playfair Display', serif;
 }
